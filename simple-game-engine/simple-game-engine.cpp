@@ -6,6 +6,10 @@
 // Sample ECS Components
 struct Position {
     float x, y;
+
+    std::string toString() {
+        return "Position(" + std::to_string(x) + ", " + std::to_string(y) + ")";
+    }
 };
 
 struct Velocity {
@@ -64,7 +68,7 @@ int main(void)
 
         // Draw entity position from query
         ecs.each([](flecs::entity e, Position& p) {
-            DrawText(std::string("Entity position at " + std::to_string(p.x) + ", " + std::to_string(p.y)).c_str(), 190, 230, 20, LIGHTGRAY);
+            DrawText(std::string("Entity at " + p.toString()).c_str(), 190, 230, 20, LIGHTGRAY);
             });
 
         EndDrawing();
