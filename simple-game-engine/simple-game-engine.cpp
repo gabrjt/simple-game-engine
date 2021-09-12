@@ -1,6 +1,5 @@
 #include <raylib.h>
 #include <flecs.h>
-#include <iostream>
 #include <string>
 
 // Sample ECS Components
