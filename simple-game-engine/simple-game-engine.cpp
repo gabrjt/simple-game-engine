@@ -28,9 +28,10 @@ int main(void)
 
     // Create example position system
     ecs.system<Position, const Velocity>()
-        .each([](Position& p, const Velocity& v) {
-        p.x += v.x;
-        p.y += v.y;
+        .each([](flecs::entity e, Position& p, const Velocity& v) {
+        const auto deltaTime = e.delta_time();
+        p.x += v.x * deltaTime;
+        p.y += v.y * deltaTime;
             });
 
     // Create entity with position and velocity components
