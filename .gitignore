@@ -1,7 +1,8 @@
-# IDE
+# Project
 .vs/
 .idea/
 build/
+CMakeFiles/
 
 # Prerequisites
 *.d

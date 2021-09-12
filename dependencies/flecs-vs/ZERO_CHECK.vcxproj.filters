@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\5ffe9fc36ff95aba981acdfb1704d73d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A59FA019-EE56-323F-BFB2-B0B75EF5C9F5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

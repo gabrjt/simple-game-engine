@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18704C21-56E1-392D-B845-3C9B04976AD2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>flecs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">flecs.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">flecs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">flecs.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">flecs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">flecs.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">flecs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">flecs.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">flecs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug";flecs_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";flecs_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/Debug/flecs.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/Debug/flecs.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";flecs_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";flecs_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/Release/flecs.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/Release/flecs.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";flecs_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";flecs_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/MinSizeRel/flecs.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/MinSizeRel/flecs.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";flecs_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";flecs_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\flecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/RelWithDebInfo/flecs.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/RelWithDebInfo/flecs.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/source/repos/C/simple-game-engine/dependencies/flecs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/source/repos/C/simple-game-engine/dependencies/flecs -BH:/source/repos/C/simple-game-engine/dependencies/flecs-vs --check-stamp-file H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeRCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeSystem.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_options.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_warnings.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/source/repos/C/simple-game-engine/dependencies/flecs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/source/repos/C/simple-game-engine/dependencies/flecs -BH:/source/repos/C/simple-game-engine/dependencies/flecs-vs --check-stamp-file H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeRCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeSystem.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_options.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_warnings.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/source/repos/C/simple-game-engine/dependencies/flecs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/source/repos/C/simple-game-engine/dependencies/flecs -BH:/source/repos/C/simple-game-engine/dependencies/flecs-vs --check-stamp-file H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeRCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeSystem.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_options.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_warnings.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/source/repos/C/simple-game-engine/dependencies/flecs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/source/repos/C/simple-game-engine/dependencies/flecs -BH:/source/repos/C/simple-game-engine/dependencies/flecs-vs --check-stamp-file H:/source/repos/C/simple-game-engine/dependencies/flecs-vs/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeRCCompiler.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\3.21.0-rc2\CMakeSystem.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_options.cmake;H:\source\repos\C\simple-game-engine\dependencies\flecs\cmake\target_default_compile_warnings.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\builder.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\component.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\entity.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\filter.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\filter_iterator.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\flecs.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\function_traits.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\id.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\builder.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\entity.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\id.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\iter.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\lifecycle_traits.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\impl\world.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\invoker.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\iter.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\lifecycle_traits.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\module.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\observer.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\pair.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\query.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\snapshot.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\system.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\trigger.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\type.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\util.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\cpp\world.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\deprecated.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\deprecated\entity.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\deprecated\iter.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\deprecated\type.hpp" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\flecs_c.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\module.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\parser.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\pipeline.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\plecs.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\rules.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\snapshot.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\stats.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\system.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\addons\timer.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\bake_config.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\os_api.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\api_defines.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\api_support.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\api_types.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\bitset.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\hashmap.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\log.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\map.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\sparse.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\strbuf.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\switch_list.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\private\vector.h" />
+    <ClInclude Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\include\flecs\type.h" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\deprecated.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\module.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\parser.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\pipeline\pipeline.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\pipeline\worker.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\plecs.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\rules.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\snapshot.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\stats.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\system\system.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\addons\timer.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\api_support.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\bootstrap.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\bitset.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\hash.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\hashmap.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\map.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\sparse.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\strbuf.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\switch_list.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\datastructures\vector.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\entity.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\filter.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\hierarchy.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\iter.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\log.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\misc.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\observable.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\observer.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\os_api.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\poly.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\query.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\stage.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\table.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\table_graph.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\trigger.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\type.c" />
+    <ClCompile Include="H:\source\repos\C\simple-game-engine\dependencies\flecs\src\world.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\ZERO_CHECK.vcxproj">
+      <Project>{672C7A1E-22BC-3FDB-BD91-30E8A045F5A2}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

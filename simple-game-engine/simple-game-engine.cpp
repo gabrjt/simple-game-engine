@@ -1,25 +1,16 @@
-/*******************************************************************************************
-*
-*   raylib [core] example - Basic window
-*
-*   Welcome to raylib!
-*
-*   To test examples, just press F6 and execute raylib_compile_execute script
-*   Note that compiled executable is placed in the same folder as .c file
-*
-*   You can find all basic examples on C:\raylib\raylib\examples folder or
-*   raylib official webpage: www.raylib.com
-*
-*   Enjoy using raylib. :)
-*
-*   This example has been created using raylib 1.0 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2013-2016 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+#include <raylib.h>
+#include <flecs.h>
+#include <iostream>
+#include <string>
 
-#include "raylib.h"
+// Sample ECS Components
+struct Position {
+    float x, y;
+};
+
+struct Velocity {
+    float x, y;
+};
 
 int main(void)
 {
@@ -31,6 +22,23 @@ int main(void)
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+
+    // Create ECS World
+    flecs::world ecs;
+
+    // Create example position system
+    ecs.system<Position, const Velocity>()
+        .each([](Position& p, const Velocity& v) {
+        p.x += v.x;
+        p.y += v.y;
+            });
+
+    // Create entity with position and velocity components
+    auto e = ecs.entity()
+        .set([](Position& p, Velocity& v) {
+        p = { 10, 20 };
+        v = { 1, 2 };
+            });
     //--------------------------------------------------------------------------------------
 
     // Main game loop
@@ -41,13 +49,22 @@ int main(void)
         // TODO: Update your variables here
         //----------------------------------------------------------------------------------
 
+        // Update ECS World with delta time
+        ecs.progress(GetFrameTime());
+
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
 
         ClearBackground(RAYWHITE);
 
+        // Draw text
         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+
+        // Draw entity position from query
+        ecs.each([](flecs::entity e, Position& p) {
+            DrawText(std::string("Entity position at " + std::to_string(p.x) + ", " + std::to_string(p.y)).c_str(), 190, 230, 20, LIGHTGRAY);
+            });
 
         EndDrawing();
         //----------------------------------------------------------------------------------
