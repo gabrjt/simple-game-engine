@@ -1,52 +1,68 @@
-#include <raylib.h>
 #include <flecs.h>
+#include <raylib.h>
 #include <string>
 
 // Sample ECS Components
-struct Position {
+struct position
+{
     float x, y;
 
-    std::string toString() {
-        return "Position(" + std::to_string(x) + ", " + std::to_string(y) + ")";
+    std::string to_string() const
+    {
+        return "position(" + std::to_string(x) + ", " + std::to_string(y) + ")";
     }
 };
 
-struct Velocity {
+struct velocity
+{
     float x, y;
+
+    std::string to_string() const
+    {
+        return "velocity(" + std::to_string(x) + ", " + std::to_string(y) + ")";
+    }
 };
 
-int main(void)
+int main()
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    constexpr int screen_width  = 800;
+    constexpr int screen_height = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    InitWindow(screen_width, screen_height, "simple game engine powered by raylib and flecs");
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
 
     // Create ECS World
     flecs::world ecs;
 
     // Create example position system
-    ecs.system<Position, const Velocity>()
-        .each([](flecs::entity e, Position& p, const Velocity& v) {
-        const auto deltaTime = e.delta_time();
-        p.x += v.x * deltaTime;
-        p.y += v.y * deltaTime;
-            });
+    ecs.system<position, const velocity>()
+       .each(
+           [](const flecs::entity entity, position& position, const velocity& velocity)
+           {
+               const auto delta_time = entity.delta_time();
+               position.x += velocity.x * delta_time;
+               position.y += velocity.y * delta_time;
+           }
+       );
 
     // Create entity with position and velocity components
-    auto e = ecs.entity()
-        .set([](Position& p, Velocity& v) {
-        p = { 10, 20 };
-        v = { 1, 2 };
-            });
+    flecs::entity entity = ecs.entity()
+                              .set(
+                                  [](position& position, velocity& velocity)
+                                  {
+                                      position = {10, 20};
+                                      velocity = {1, 2};
+                                  }
+                              )
+                              .set_name("MyEntity");
+
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
+    while (!WindowShouldClose()) // Detect window close button or ESC key
     {
         // Update
         //----------------------------------------------------------------------------------
@@ -66,9 +82,12 @@ int main(void)
         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         // Draw entity position from query
-        ecs.each([](flecs::entity e, Position& p) {
-            DrawText(std::string("Entity at " + p.toString()).c_str(), 190, 230, 20, LIGHTGRAY);
-            });
+        ecs.each(
+            [](flecs::entity entity, const position& position)
+            {
+                DrawText(std::string(std::string(entity.name()) + " " + std::string(position.to_string())).c_str(), 190, 230, 20, LIGHTGRAY);
+            }
+        );
 
         EndDrawing();
         //----------------------------------------------------------------------------------
@@ -76,7 +95,7 @@ int main(void)
 
     // De-Initialization
     //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
+    CloseWindow(); // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;
