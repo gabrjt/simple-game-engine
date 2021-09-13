@@ -24,7 +24,7 @@ struct display_world_time_tag {};
 
 int main()
 {
-    sge::application application(1920, 1080, "My First App", 60);
+    sge::application application(1920, 1080, "Simple Game Engine", 60);
 
     const flecs::world& ecs_world = application.get_ecs_world();
 
@@ -34,8 +34,8 @@ int main()
 
     ecs_world
         .entity("CongratsText")
-        .set(position_component{GetScreenWidth() * 0.5f - 500, GetScreenHeight() * 0.5f})
-        .set(screen_text_component{"Congrats! You created your first window!", 50, LIGHTGRAY});
+        .set(position_component{GetScreenWidth() * 0.5f - 750, GetScreenHeight() * 0.5f})
+        .set(screen_text_component{"Congrats! You created your first window! Powered by raylib", 50, LIGHTGRAY});
 
     ecs_world
         .entity("TickingText")
