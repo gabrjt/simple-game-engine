@@ -8,8 +8,6 @@ namespace sge
     {
         flecs::world ecs_world_;
 
-        application() = delete;
-
     public:
         application(int screen_width, int screen_height, const char* title, int target_fps);
 

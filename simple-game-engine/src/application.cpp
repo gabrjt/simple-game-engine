@@ -3,7 +3,7 @@
 
 namespace sge
 {
-    application::application(int screen_width, int screen_height, const char* title, int target_fps)
+    application::application(const int screen_width, const int screen_height, const char* title, const int target_fps)
     {
         InitWindow(screen_width, screen_height, title);
         SetTargetFPS(target_fps);
