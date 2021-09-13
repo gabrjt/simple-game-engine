@@ -130,7 +130,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\build\raylib\bin\$(Platform)\$(Configuration)\;$(SolutionDir)\build\flecs_static\bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)build\raylib\bin\$(Platform)\$(Configuration);$(SolutionDir)build\flecs_static\bin\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>flecs_static.lib;winmm.lib;raylib.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -150,17 +150,17 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\build\raylib\bin\$(Platform)\$(Configuration)\;$(SolutionDir)\build\flecs_static\bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)build\raylib\bin\$(Platform)\$(Configuration);$(SolutionDir)build\flecs_static\bin\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>flecs_static.lib;winmm.lib;raylib.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\application.cpp">
       <AssemblerOutput>NoListing</AssemblerOutput>
-      <AssemblerListingLocation>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</AssemblerListingLocation>
+      <AssemblerListingLocation>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
       <BrowseInformation>false</BrowseInformation>
-      <BrowseInformationFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</BrowseInformationFile>
+      <BrowseInformationFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</BrowseInformationFile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <CompileAs>Default</CompileAs>
       <ConformanceMode>true</ConformanceMode>
@@ -183,18 +183,18 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>Default</LanguageStandard_C>
       <MinimalRebuild>false</MinimalRebuild>
-      <ModuleDependenciesFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ModuleDependenciesFile>
-      <ModuleOutputFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ModuleOutputFile>
+      <ModuleDependenciesFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ModuleDependenciesFile>
+      <ModuleOutputFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ModuleOutputFile>
       <OmitDefaultLibName>false</OmitDefaultLibName>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <Optimization>MaxSpeed</Optimization>
-      <ObjectFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ObjectFileName>
+      <ObjectFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <CallingConvention>Cdecl</CallingConvention>
-      <ProgramDataBaseFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\vc142.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\vc142.pdb</ProgramDataBaseFileName>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\simple-game-engine.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\simple-game-engine.pch</PrecompiledHeaderOutputFile>
       <PreprocessToFile>false</PreprocessToFile>
       <PreprocessKeepComments>false</PreprocessKeepComments>
       <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
@@ -202,21 +202,21 @@
       <RuntimeLibrary>MultiThreadedDll</RuntimeLibrary>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
       <ShowIncludes>false</ShowIncludes>
-      <SourceDependenciesFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</SourceDependenciesFile>
+      <SourceDependenciesFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</SourceDependenciesFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <SmallerTypeCheck>false</SmallerTypeCheck>
       <SpectreMitigation>false</SpectreMitigation>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <SupportJustMyCode>false</SupportJustMyCode>
-      <TrackerLogDirectory>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\simple-g.eeb6dab1.tlog\</TrackerLogDirectory>
+      <TrackerLogDirectory>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\simple-g.eeb6dab1.tlog\</TrackerLogDirectory>
       <TranslateIncludes>false</TranslateIncludes>
       <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
       <TreatWarningAsError>false</TreatWarningAsError>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <UseFullPaths>true</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <XMLDocumentationFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</XMLDocumentationFileName>
+      <XMLDocumentationFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</XMLDocumentationFileName>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <IntelJCCErratum>false</IntelJCCErratum>
       <ExternalDirectoriesEnv>EXTERNAL_INCLUDE;</ExternalDirectoriesEnv>
@@ -232,10 +232,10 @@
     </ClCompile>
     <ClCompile Include="src\main.cpp">
       <AssemblerOutput>NoListing</AssemblerOutput>
-      <AssemblerListingLocation>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</AssemblerListingLocation>
+      <AssemblerListingLocation>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
       <BrowseInformation>false</BrowseInformation>
-      <BrowseInformationFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</BrowseInformationFile>
+      <BrowseInformationFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</BrowseInformationFile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <CompileAs>Default</CompileAs>
       <ConformanceMode>true</ConformanceMode>
@@ -258,18 +258,18 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>Default</LanguageStandard_C>
       <MinimalRebuild>false</MinimalRebuild>
-      <ModuleDependenciesFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ModuleDependenciesFile>
-      <ModuleOutputFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ModuleOutputFile>
+      <ModuleDependenciesFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ModuleDependenciesFile>
+      <ModuleOutputFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ModuleOutputFile>
       <OmitDefaultLibName>false</OmitDefaultLibName>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <Optimization>MaxSpeed</Optimization>
-      <ObjectFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</ObjectFileName>
+      <ObjectFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <CallingConvention>Cdecl</CallingConvention>
-      <ProgramDataBaseFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\vc142.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\vc142.pdb</ProgramDataBaseFileName>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\simple-game-engine.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\simple-game-engine.pch</PrecompiledHeaderOutputFile>
       <PreprocessToFile>false</PreprocessToFile>
       <PreprocessKeepComments>false</PreprocessKeepComments>
       <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
@@ -277,21 +277,21 @@
       <RuntimeLibrary>MultiThreadedDll</RuntimeLibrary>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
       <ShowIncludes>false</ShowIncludes>
-      <SourceDependenciesFile>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</SourceDependenciesFile>
+      <SourceDependenciesFile>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</SourceDependenciesFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <SmallerTypeCheck>false</SmallerTypeCheck>
       <SpectreMitigation>false</SpectreMitigation>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <SupportJustMyCode>false</SupportJustMyCode>
-      <TrackerLogDirectory>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\simple-g.eeb6dab1.tlog\</TrackerLogDirectory>
+      <TrackerLogDirectory>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\simple-g.eeb6dab1.tlog\</TrackerLogDirectory>
       <TranslateIncludes>false</TranslateIncludes>
       <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
       <TreatWarningAsError>false</TreatWarningAsError>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <UseFullPaths>true</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <XMLDocumentationFileName>H:\source\repos\C\simple-game-engine\\build\simple-game-engine\obj\x64\Release\</XMLDocumentationFileName>
+      <XMLDocumentationFileName>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</XMLDocumentationFileName>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <IntelJCCErratum>false</IntelJCCErratum>
       <ExternalDirectoriesEnv>EXTERNAL_INCLUDE;</ExternalDirectoriesEnv>
