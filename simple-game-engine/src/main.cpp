@@ -48,8 +48,31 @@ int main()
         .set(screen_text_component{std::string(), 20, RED})
         .add<display_world_time_tag>();
 
+    // Simulation systems
+    ecs_world
+        .system<screen_text_component, display_world_time_tag>()
+        .kind(flecs::OnUpdate)
+        .iter(
+            [](const flecs::iter it, screen_text_component* screen_text_component, const display_world_time_tag* _)
+            {
+                screen_text_component->text = std::to_string(it.world_time());
+            }
+        );
+
+    // Presentation systems
+    ecs_world
+        .system()
+        .kind(flecs::PostUpdate)
+        .iter(
+            [](const flecs::iter it)
+            {
+                BeginDrawing();
+            }
+        );
+
     ecs_world
         .system<screen_clear_background_component>()
+        .kind(flecs::PostUpdate)
         .each(
             [](const screen_clear_background_component& screen_clear_background_component)
             {
@@ -58,20 +81,22 @@ int main()
         );
 
     ecs_world
-        .system<screen_text_component, display_world_time_tag>()
-        .iter(
-            [](const flecs::iter it, screen_text_component* screen_text_component, const display_world_time_tag* _)
-            {
-                screen_text_component->text = std::to_string(it.world_time());
-            }
-        );
-
-    ecs_world
         .system<screen_text_component, position_component>()
+        .kind(flecs::PostUpdate)
         .each(
             [](const screen_text_component& screen_text_component, const position_component& position_component)
             {
                 DrawText(screen_text_component.text.c_str(), position_component.x, position_component.y, screen_text_component.font_size, screen_text_component.color);
+            }
+        );
+
+    ecs_world
+        .system()
+        .kind(flecs::PostUpdate)
+        .iter(
+            [](const flecs::iter it)
+            {
+                EndDrawing();
             }
         );
 

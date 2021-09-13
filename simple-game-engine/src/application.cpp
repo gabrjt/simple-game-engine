@@ -11,30 +11,12 @@ namespace sge
 
     void application::run() const
     {
-        // Main game loop
-        while (!WindowShouldClose()) // Detect window close button or ESC key
+        while (!WindowShouldClose())
         {
-            // Update
-            //----------------------------------------------------------------------------------
-            // TODO: update simulation systems
-            //----------------------------------------------------------------------------------
-
-            // Draw
-            //----------------------------------------------------------------------------------
-            BeginDrawing();
-
-            // Update ECS World with delta time
-            // TODO: update presentation systems
             ecs_world_.progress(GetFrameTime());
-
-            EndDrawing();
-            //----------------------------------------------------------------------------------
         }
 
-        // De-Initialization
-        //--------------------------------------------------------------------------------------
-        CloseWindow(); // Close window and OpenGL context
-        //--------------------------------------------------------------------------------------
+        CloseWindow();
     }
 
     flecs::world& application::get_ecs_world()
