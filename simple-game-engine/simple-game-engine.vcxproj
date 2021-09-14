@@ -255,7 +255,7 @@
     <ClInclude Include="src\application_sample.h" />
     <ClInclude Include="src\system_screen_clear_background.h" />
     <ClInclude Include="src\system_draw_text.h" />
-    <ClInclude Include="src\component_position.h" />
+    <ClInclude Include="src\component_translation2.h" />
     <ClInclude Include="src\component_screen_clear_background.h" />
     <ClInclude Include="src\component_screen_text.h" />
     <ClInclude Include="src\system_set_screen_text_world_time.h" />

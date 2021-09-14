@@ -41,9 +41,6 @@
     <ClInclude Include="src\application_sample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\component_position.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\component_screen_clear_background.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -57,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\system_set_screen_text_world_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\component_translation2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
