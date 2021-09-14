@@ -10,7 +10,7 @@
 
 void RegisterSampleApplication()
 {
-    ecs_world_t* ecs_world = GetApplicationECSWorld();
+    ecs_world_t* ecs_world = GetApplicationEcsWorld();
 
     // Register Components
     ECS_COMPONENT(ecs_world, ComponentPosition);

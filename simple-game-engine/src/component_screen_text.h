@@ -6,7 +6,7 @@
 
 typedef struct
 {
-    char  text[COMPONENT_SCREEN_TEXT_BUFFER_SIZE];
-    int   font_size;
+    char text[COMPONENT_SCREEN_TEXT_BUFFER_SIZE];
+    int font_size;
     Color color;
 } ComponentScreenText;

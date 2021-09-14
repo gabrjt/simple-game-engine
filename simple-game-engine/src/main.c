@@ -8,7 +8,7 @@ int main()
 
     // Register components, systems and create entities
     RegisterSampleApplication();
-    
+
     // Run Game Loop
     ApplicationRun();
 
