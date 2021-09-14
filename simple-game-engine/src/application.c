@@ -30,39 +30,3 @@ void ApplicationQuit()
     CloseWindow();
     ecs_fini(ecs_world);
 }
-
-void SystemBeginDrawing(const ecs_iter_t* it)
-{
-    BeginDrawing();
-}
-
-void RegisterSystemBeginDrawing()
-{
-    ecs_system_init(
-        ecs_world,
-        &(ecs_system_desc_t) {
-            .entity = {
-                .add = { EcsPostUpdate }
-            },
-            .callback = SystemBeginDrawing
-        }
-    );
-}
-
-void SystemEndDrawing(const ecs_iter_t* it)
-{
-    EndDrawing();
-}
-
-void RegisterSystemEndDrawing()
-{
-    ecs_system_init(
-        ecs_world,
-        &(ecs_system_desc_t) {
-            .entity = {
-                .add = { EcsPostUpdate }
-            },
-            .callback = SystemEndDrawing
-        }
-    );
-}

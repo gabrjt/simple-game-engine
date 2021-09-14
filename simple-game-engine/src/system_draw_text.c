@@ -3,6 +3,11 @@
 #include "component_screen_text.h"
 #include "component_translation2.h"
 
+void RegisterSystemDrawText(ecs_world_t* ecs_world)
+{
+    ECS_SYSTEM(ecs_world, SystemDrawText, EcsPostUpdate, ComponentScreenText, ComponentTranslation2);
+}
+
 void SystemDrawText(const ecs_iter_t* it)
 {
     const ComponentScreenText* screen_text_components = ecs_term(it, ComponentScreenText, 1);
