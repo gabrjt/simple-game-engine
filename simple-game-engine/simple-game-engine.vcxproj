@@ -161,6 +161,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\application.c" />
+    <ClCompile Include="src\application_sample.c" />
+    <ClCompile Include="src\system_screen_clear_background.c" />
+    <ClCompile Include="src\system_draw_text.c" />
     <ClCompile Include="src\main.c">
       <AssemblerOutput>NoListing</AssemblerOutput>
       <AssemblerListingLocation>$(SolutionDir)build\$(ProjectName)\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
@@ -236,6 +240,7 @@
       <AdditionalIncludeDirectories>H:\source\repos\C\simple-game-engine\dependencies\raylib\src;H:\source\repos\C\simple-game-engine\dependencies\flecs-vs\include;</AdditionalIncludeDirectories>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="src\system_set_screen_text_world_time.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dependencies\flecs-vs\flecs_static.vcxproj">
@@ -244,6 +249,16 @@
     <ProjectReference Include="..\dependencies\raylib\projects\VS2019\raylib\raylib.vcxproj">
       <Project>{e89d61ac-55de-4482-afd4-df7242ebc859}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\application.h" />
+    <ClInclude Include="src\application_sample.h" />
+    <ClInclude Include="src\system_screen_clear_background.h" />
+    <ClInclude Include="src\system_draw_text.h" />
+    <ClInclude Include="src\component_position.h" />
+    <ClInclude Include="src\component_screen_clear_background.h" />
+    <ClInclude Include="src\component_screen_text.h" />
+    <ClInclude Include="src\system_set_screen_text_world_time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
